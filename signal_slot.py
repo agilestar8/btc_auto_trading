@@ -10,7 +10,6 @@ class MySignal(QObject):
         self.signal1.emit()
         self.signal2.emit(1, 2)
 
-
 class MyWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -20,14 +19,13 @@ class MyWindow(QMainWindow):
         mysignal.signal2.connect(self.signal2_emitted)
         mysignal.run()
 
-    @pyqtSlot()
+
     def signal1_emitted(self):
         print("signal1 emitted")
 
-    @pyqtSlot(int, int)
+
     def signal2_emitted(self, arg1, arg2):
         print("signal2 emitted", arg1, arg2)
-
 
 app = QApplication(sys.argv)
 window = MyWindow()

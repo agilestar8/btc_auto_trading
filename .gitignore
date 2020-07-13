@@ -1,5 +1,9 @@
 ## ignore file ##
 
-pykorbit/*
-
-icon/*
+pykorbit/
+icon/
+bs4/
+lxml/
+soupsieve/
+html5lib/
+DataTime
