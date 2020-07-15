@@ -44,4 +44,7 @@ def get_BA(code):
     return tags
 
 for tag in get_BA("000660"):
-        print(tag.text)
+    print(tag.text)
+
+print(get_dvr("000660"))
+print(get_per("000660"))
