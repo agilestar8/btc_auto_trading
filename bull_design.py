@@ -35,7 +35,9 @@ class mywindow(QMainWindow,form):
             self.tableWidget.setItem(i, 3, QTableWidgetItem(state))
 
     def get_market_infos(self, ticker):
-        df = pybithumb.get_ohlcv(ticker)
+        # df = pybithumb.get_ohlcv(ticker)
+        df = pybithumb.get_candlestick(ticker)
+        
         ma5 = df["close"].rolling(5).mean()
         last_ma5 = ma5[-2]
         price = pybithumb.get_current_price(ticker)
